@@ -13,8 +13,8 @@ try {
     $config = Yaml::parseFile($configFile);
 
     $host = $config['database']['host'];
-    $dbname = $config['database']['name'];
-    $username = $config['database']['user'];
+    $dbname = $config['database']['database'];
+    $username = $config['database']['username'];
     $password = $config['database']['password'];
 
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
